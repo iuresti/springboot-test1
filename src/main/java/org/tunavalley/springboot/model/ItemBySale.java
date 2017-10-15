@@ -1,6 +1,5 @@
 package org.tunavalley.springboot.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,11 +18,9 @@ public class ItemBySale {
     private Long id;
 
     @ManyToOne(targetEntity = Item.class)
-    @Column(name = "item_id")
     private Item item;
 
     @ManyToOne(targetEntity = Sale.class)
-    @Column(name = "sale_id")
     private Sale sale;
 
     private Integer price;

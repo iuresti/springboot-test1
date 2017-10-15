@@ -28,7 +28,6 @@ public class Sale {
     private String location;
 
     @ManyToOne(targetEntity = User.class)
-    @Column(name = "user_id")
     private User user;
 
     public Long getId() {
